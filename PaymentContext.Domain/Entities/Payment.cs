@@ -8,14 +8,14 @@ namespace PaymentContext.Domain.Entities
     public abstract class Payment : Entity
     {
         public Payment(string number,
-             DateTime paidDate,
-             DateTime expireDate,
-             decimal total,
-             decimal totalPaid,
-             string payer,
-             Document document,
-             Address address,
-             Email email)
+            DateTime paidDate,
+            DateTime expireDate,
+            decimal total,
+            decimal totalPaid,
+            string payer,
+            Document document,
+            Address address,
+            Email email)
         {
             Number = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 10).ToUpper();
             PaidDate = paidDate;
